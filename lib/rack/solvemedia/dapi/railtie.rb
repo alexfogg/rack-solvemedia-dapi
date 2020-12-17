@@ -16,7 +16,7 @@ module Rack
         options[:site_domain] = site_domain if site_domain
         options[:site_path]   = site_path if site_path
 
-        app.middleware.use 'Rack::SolveMedia::DAPI', site_id, options
+        app.middleware.use Rack::SolveMedia::DAPI, site_id, options
       end
 
       initializer "rack.solvemedia.dapi.helpers" do
